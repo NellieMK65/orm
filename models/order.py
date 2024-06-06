@@ -22,6 +22,13 @@ class Order:
         conn.commit()
         self.id = cursor.lastrowid
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "total": self.total,
+            "created_at": self.created_at
+        }
+
     @classmethod
     def row_to_instance(cls, row):
         if row == None:

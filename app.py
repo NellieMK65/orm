@@ -17,7 +17,7 @@ customer_1 = Customer("Leslie", "0712345678")
 print(customer_1)
 
 customer_2 = Customer.find_one(2)
-customer_2_orders = customer_2.orders()
+customer_2_orders = customer_2.get_orders()
 
 print(customer_2_orders)
 
